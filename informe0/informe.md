@@ -8,17 +8,17 @@
 Al final de la plantilla encontrará algunos ejemplos para enriquecer su informe, incluyendo cómo insertar imágenes, tablas y ecuaciones, así como generar hipervínculos a su repositorio o al propio informe. Ir a [ejemplos en Markdown](#ejemplos-usando-markdown)
 
 ---
-# Práctica 1: TÍTULO PRÁCTICA
+# Práctica 1C: Mediciones de potencia y frecuencia
 
 ### Integrantes
-- **PRIMER INTEGRANTE** - Código
-- **SEGUNDO INTEGRANTE** - Código
+- **ANDRES QUINTERO** - 2204655
+- **JHON CHAVEZ** - 2212234
 
 Escuela de Ingenierías Eléctrica, Electrónica y de Telecomunicaciones  
 Universidad Industrial de Santander
 
 ### Fecha
-31 de diciembre de 2030
+19 de febrero de 2025
 
 ---
 
@@ -27,13 +27,11 @@ Los autores de este informe certifican que el contenido aquí presentado es orig
 
 Asimismo, los autores asumen plena responsabilidad por la información contenida en este documento. 
 
-Uso de IA: [Indicar si se usó IA y para qué aspectos específicos, por ejemplo: "Se utilizó ChatGPT para reformular secciones del texto y verificar gramática, pero el contenido técnico fue desarrollado íntegramente por los autores."]
-
 ---
 ## Contenido
 
 ### Resumen
-Descripción en no más de 150 palabras del contenido de la práctica. Debe ser conciso y brindar una idea clara sobre el trabajo realizado y sus conclusiones.
+Se corroboro de manera 
 
 **Palabras clave:** de 2 a 5 palabras clave. 
 
@@ -48,8 +46,7 @@ Cada práctica contará con preguntas orientadoras para la elaboración de la in
 - ¿Qué pasa cuando se asigna una frecuencia de muestreo inadecuada?
 
 ### Procedimiento
-Debe basarse en las acciones efectivamente realizadas durante el laboratorio, describiendo los procesos realizados y los resultados obtenidos. Para cada práctica se pueden brindar preguntas orientadoras o pasos a seguir para establecer lo que se espera lograr/estudiar/analizar/obtener/comparar. Por ejemplo:
-- Describa los procesos realizados en el laboratorio  y los resultados obtenidos.
+
 - ¿Cómo se alcanza el límite de Nyquist y que pasa cuando se disminuye de este?
 - ¿Por qué al interpolar una señal en GNURADIO su frecuencia disminuye?
 - ¿Por qué al diezmar una señal en GNURADIO su frecuencia aumenta?
