@@ -65,29 +65,43 @@ Al analizar las distintas formas de ondas, se pudo observar un cambio en la dist
   <img src="https://github.com/user-attachments/assets/28614b75-55c9-41c4-b65d-cd5cfe143c95" width="500"/>
 </p>
 Imagen #: Onda cuadrada (izquierda), onda triangular (derecha)
-    ![1_complex2](https://github.com/user-attachments/assets/1a12f8ea-6970-4b3b-8c67-c13a5a5ddc4f)
-
-Si observamos la onda cuadrada, esta contiene armónicos impares (múltiplos de 𝑓0), ademas la energía se distribuye en varias frecuencias, disminuyendo con $1/𝑛$ como se puede ver en la grafica.
+</p>
+Si observamos la onda cuadrada, esta contiene armónicos impares (múltiplos de 𝑓0), ademas la energía se distribuye en varias frecuencias, disminuyendo con $ 1/𝑛 $ como se puede ver en la grafica.
 En cuanto a la onda triangular esta también tiene solo armónicos impares, pero con menor amplitud que la onda cuadrada.
-La potencia decrece más rápido, aproximadamente con $1/𝑛^2$, lo que significa menor contenido de alta frecuencia.
+La potencia decrece más rápido, aproximadamente con $ 1/𝑛^2 $, lo que significa menor contenido de alta frecuencia.
 
 Ahora bien, si cambiamos los parametros de la fuente podemos observar diferentes cambios tales como:
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/bcada02f-efe9-46d2-934d-8f249962aa7c" width="500"/>
   <img src="https://github.com/user-attachments/assets/0ae69fee-56c4-4c83-a9eb-3040ca6ef45f" width="500"/>
+  <img src="https://github.com/user-attachments/assets/bcada02f-efe9-46d2-934d-8f249962aa7c" width="500"/>
   <img src="https://github.com/user-attachments/assets/1f7a986b-c8fc-4f06-bd32-b2ce42156cef" width="500"/>
   <img src="https://github.com/user-attachments/assets/1a12f8ea-6970-4b3b-8c67-c13a5a5ddc4f" width="500"/>
  </p>   
+ 
 Imagen #: Modificacion de parametros de la fuente.
 </p>
-En la figura anterior 
+Inicialmente la onda senoidal pura, al tener una componente real y una imaginaria, en el plano de la frecuencia se cancela unas componentes y por ende se observa un solo impulso. En la figura anterior se fue variando algunos parametros, cuando se cambio la fase de la onda, no hubo ningún cambio en la respuesta temporal ni en el espectro, es decir, no vario su potencia. Cuando se modifico el OFFSET hubo un cambio en la respuesta temporal, desplazandose verticalmente la componente real de la señal senoidal, pero el cambio mas importante se da en su espectro, donde aparecen dos impulsos, esto se debe a que al desplazarse la componente real de la señal, ya no se van a cancelar con las componentes imaginarias de la onda. Al modificar la frecuencia, se produjo cambios tanto en el tiempo como en su espectro, Los picos se desplazan a la nueva frecuencia ±f0′, la amplitud de los picos no cambia, porque la energía sigue concentrada en una sola frecuencia. Y para finalizar se cambio la amplitud provocando un aumento en la potencia de la señal tanto en el tiempo como en la frecuencia.
+
+Las señales cuadradas y senoidales denotan su mayor diferencia en su espectro, esto debido a que por una parte la señal seno distribuye casi toda su energia en 2 picos, la señal cuadrada genera muchos armonicos que van disminuyendo su potencia conforme se alejan de la fundamental.
 
 </p>
 
+#### Actividad 3:
+Inicialmente se configuró el software GNA RADIO para que el USRP 2920 pudiera transmitir las señales deseadas, para eso se modificaron ciertos bloques del flujograma:
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bdd76b5b-ad86-4580-ba3d-909d178d228c" width="520"/>
+  <img src="https://github.com/user-attachments/assets/cc7aa257-9ebe-46ef-bfda-121938ac09ee" width="350"/>
+![1_float])
 
-
-
+</p>   
+Imagen #: Modificacion de parametros de la USRP 2090
+</p>
+En la figura anterior notese que el parametro de la ganancia del modulador es de 30 dB, por ende la señal que se simula no es la misma que llega al analizador de espectros por que este le va a inyectar una ganancia a la señal, como se obserba en la siguiente imagen:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5121fcc8-c1b9-4c8d-b909-ea773700eb9f" width="550"/>
+  <img src="https://github.com/user-attachments/assets/15ce160d-379b-41e9-bf1a-7dd068ec139b" width="400"/>
+</p>   
 
 ### Conclusiones
 Se sintetizan los principales aportes y puntos relevantes de la práctica, evitando repetir lo ya consignado en las otras secciones del informe. 
