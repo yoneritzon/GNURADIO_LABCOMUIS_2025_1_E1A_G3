@@ -143,7 +143,7 @@ Imagen 5: Modificacion de parametros de la USRP 2090
   <img src="https://github.com/user-attachments/assets/5121fcc8-c1b9-4c8d-b909-ea773700eb9f" width="550"/>
   <img src="https://github.com/user-attachments/assets/15ce160d-379b-41e9-bf1a-7dd068ec139b" width="400"/>
 </p>   
-Imagen #: Comparación de la potencia simulada y la recibida por el analizador de espectros.
+Imagen 6: Comparación de la potencia simulada y la recibida por el analizador de espectros.
 </p>
 Si comparamos la potencia de la simulación respecto a la mostrada en el analizador de espectros, se nota una diferencia de casi 14dB. Para calcular la maxima potencia que se podría entregar se procedio a aumentar los parametros necesarios:
 
@@ -151,7 +151,7 @@ Si comparamos la potencia de la simulación respecto a la mostrada en el analiza
   <img src="https://github.com/user-attachments/assets/cf6f6874-bfe6-48b8-9b00-69b2dadc4ee4" width="500"/>
   <img src="https://github.com/user-attachments/assets/afa16fc8-2495-4233-8b67-4c552406521e" width="500"/>
 </p>   
-Imagen #: Potencia maxima para una señal coseno flotante.
+Imagen 7: Potencia maxima para una señal coseno flotante.
 </p>
 
 Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador.
@@ -159,13 +159,33 @@ Se oberva que la señal final es parecida a la simulada, pero su potencia es may
   <img src="https://github.com/user-attachments/assets/78632ef2-d70f-4bf4-99fa-b04376058642" width="550"/>
   <img src="https://github.com/user-attachments/assets/a0ee2903-5251-4835-a829-d9a6b8247356" width="400"/>
 </p>   
-Imagen #: Potencia maxima para una señal coseno compleja.
+Imagen 8: Potencia maxima para una señal coseno compleja.
 </p>
 
-Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador. Para calcular el ancho de banda
-con el analizador fue necesario identificar que tipo de filtro era, en este caso un pasa banda, luego se procedio a calcularlo:
+Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador. Para calcular la ganancia entregada por el radio, calculamos la ganancia de la señal y luego hacemos una diferencia en potencias con la que nos muestra el analizador de espectros:
+
+Potencia teorica de la señal antes de modularse:
 <p align="center">
-  BWM= f2-f1
+  P= 10Log(A^2/4) = -12.04 [dB]
+</p> 
+La potencia experimental obtenida de la grafica (Imagen 8) es de -4.64 [dB].
+</p>
+
+<p align="center">
+  P = -4.64 - (-12,04) = 7.40 [dB] Mayor a la simulada </p>
+  
+<p align="center">
+  P = 10^(7,40/10)     = 5,49 [W] Mayor a la simulada </p>
+  
+<p align="center">
+  V = (5,49)^(0.5)     = 2,34 [v] Mayor a la simulada
+</p> 
+
+
+Para calcular el ancho de banda
+con el analizador fue necesario identificar que tipo de filtro era, en este caso un banda base, luego se procedio a calcularlo:
+<p align="center">
+  BWM= f2-f1 = 3,7 [kHz]
 </p> 
 
 
@@ -185,61 +205,4 @@ Ejemplo de referencia:
 - [Proakis, 2014] J. Proakis, M. Salehi. Fundamentals of communication systems. 2 ed. England: Pearson Education Limited, 2014. p. 164-165, 346. Chapter 5 In: [Biblioteca UIS](https://uis.primo.exlibrisgroup.com/permalink/57UIDS_INST/63p0of/cdi_askewsholts_vlebooks_9781292015699)
 - ChatGPT, modelo GPT-4 de OpenAI. (2025). Información generada mediante interacción en ChatGPT. Disponible en https://chat.openai.com
 ---
-# Ejemplos usando Markdown
 
-Volver al [INICIO](#laboratorio-de-comunicaciones)
-
-## Inclusión de Imágenes
-### Imagen de referencia dentro del repositorio:
-![Networking](my%20file/test.png)
-
-### Imagen de fuente externa
-![GNU Radio logo](https://kb.ettus.com/images/thumb/5/50/gnuradio.png/600px-gnuradio.png)
-
-### Uso de html para cambiar escala de la imagen
-<img src="https://kb.ettus.com/images/thumb/5/50/gnuradio.png/600px-gnuradio.png" alt="GNU Radio Logo" width="300">
-
-## Creación de hipevínculos 
-- [Aprende Markdown](https://markdown.es/)
-- [Más acerca de Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Abrir documento en el repositorio](my%20file/test_file.txt). Si hay espacios en la ruta de su archivo, reemplácelos por `%20`.
-- Ir a una sección de este documento. Por ejemplo: [Ir a Contenido](#contenido) Tenga en cuenta escribir el título de la sección en minúsculas y los espacios reemplazarlos por guiones.
-## Uso de Expresiones Matemáticas
-Se pueden incluir ecuaciones en el archivo `README.md` utilizando sintaxis similar a [LaTeX](https://manualdelatex.com/tutoriales/ecuaciones):
-
-### Ecuaciones en Línea
-```
-La energía de una señal exponencial es $E = \int_0^\infty A^2 e^{-2t/\tau} dt$.
-```
-**Salida renderizada:**
-La energía de una señal exponencial es $E = \int_0^\infty A^2 e^{-2t/\tau} dt$.
-
-### Ecuaciones en Bloque
-```
-$$E = \int_0^\infty A^2 e^{-2t/\tau} dt = \frac{A^2 \tau}{2}$$
-```
-**Salida renderizada**
-$$E = \int_0^\infty A^2 e^{-2t/\tau} dt = \frac{A^2 \tau}{2}$$
-
-## Creación de Tablas
-
-**Tabla 1.** Ejemplo de tabla en Markdown.
-
-| Parámetro | Valor |
-|-----------|-------|
-| Frecuencia (Hz) | 1000 |
-| Amplitud (V) | 5 |
-| Ciclo útil (%) | 50 |
-
-## Inclusión de código
-
-```python
-def hello_world():
-    print("Hello, World!")
-```
-
-También es posible resaltar texto tipo código como `print("Hello, World!")`.
-
----
-
-Volver al [INICIO](#laboratorio-de-comunicaciones)
