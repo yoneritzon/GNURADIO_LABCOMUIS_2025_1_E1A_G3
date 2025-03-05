@@ -36,7 +36,6 @@ En este informe se expone de forma general el procedimiento experimental llevado
 **Palabras clave:** 
 - Potencia
 - Frecuencia
-- SDR
 - SNR
 
 ### Introducción
