@@ -168,32 +168,28 @@ Potencia teorica de la señal antes de modularse:
 <p align="center">
   P= 10Log(A^2/4) = -12.04 [dB]
 </p> 
-La potencia experimental obtenida de la grafica (Imagen 8) es de -4.64 [dB].
+La potencia experimental obtenida de la grafica (Imagen 8) es aproximadamente de -16.00 [dBm].
 </p>
-
 <p align="center">
-  P = -4.64 - (-12,04) = 7.40 [dB] Mayor a la simulada </p>
+  P = -16 - (-12,04)  = 13.96 [dB] Mayor a la simulada </p>
   
 <p align="center">
-  P = 10^(7,40/10)     = 5,49 [W] Mayor a la simulada </p>
+  P = 10^(13,96/10)   = 24,88 [W] Mayor a la simulada </p>
   
 <p align="center">
-  V = (5,49)^(0.5)     = 2,34 [v] Mayor a la simulada
+  V = (5,49)^(0.5)    = 4,98 [v] Mayor a la simulada
 </p> 
-
-
+Se aclara que esta potencia se calculo tomando en cuenta 1 sola componente del espectro.
+</p> 
 Para calcular el ancho de banda
 con el analizador fue necesario identificar que tipo de filtro era, en este caso un banda base, luego se procedio a calcularlo:
 <p align="center">
   BWM= f2-f1 = 3,7 [kHz]
 </p> 
-
-
-
-
-
-
-
+Para normalizar el piso de ruido fue necesario sacar unos valores aproximados en los que oscilaba el ruido.
+<p align="center">
+  NF= PNref - 10log(RBW/1) = (-58-68)/2 - 10log(3,7k/1) = -98.68 [dBm]
+</p> 
 
 ### Conclusiones
 - La práctica evidenció la relevancia de ajustar adecuadamente los parámetros y montar correctamente los equipos para conseguir una señal de alta calidad y un análisis exacto en ambientes ruidosos. 
