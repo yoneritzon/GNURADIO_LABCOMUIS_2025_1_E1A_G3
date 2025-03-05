@@ -23,7 +23,7 @@ Universidad Industrial de Santander
 ---
 
 ## Declaración de Originalidad y Responsabilidad
-Los autores de este informe certifican que el contenido aquí presentado es original y ha sido elaborado de manera independiente. Se han utilizado fuentes externas únicamente como referencia tales como chatGPT y han sido debidamente citadas.
+Los autores de este informe certifican que el contenido aquí presentado es original y ha sido elaborado de manera independiente. Se han utilizado fuentes externas únicamente como referencia tales como chatGPT y han sido debidamente citadas. La herramienta anteriormente citada tambien ayudo con la redaccion de este informe.
 
 Asimismo, los autores asumen plena responsabilidad por la información contenida en este documento. 
 
