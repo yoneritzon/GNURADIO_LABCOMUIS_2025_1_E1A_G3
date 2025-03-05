@@ -133,8 +133,9 @@ En la figura anterior notese que el parametro de la ganancia del modulador es de
 </p>   
 
 ### Conclusiones
-Se sintetizan los principales aportes y puntos relevantes de la práctica, evitando repetir lo ya consignado en las otras secciones del informe. 
-
+- La práctica evidenció la relevancia de ajustar adecuadamente los parámetros y montar correctamente los equipos para conseguir una señal de alta calidad y un análisis exacto en ambientes ruidosos. 
+- Una potencia de señal adecuada mejora la SNR, lo que se ve como una mayor calidad, no obstante niveles exesivos podrian saturar o inducir interderencia.
+- Aunque las fuentes complejas incorporan datos de magnitud y fase, las fuentes flotantes son modeladas como valores reales que se basan en un voltaje. Esto es crucial para el estudio fasorial y para la aplicación de las transformadas de Fourier.
 ### Referencias
 Ejemplo de referencia:
 
