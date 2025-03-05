@@ -33,7 +33,11 @@ Asimismo, los autores asumen plena responsabilidad por la información contenida
 ### Resumen
 Se corroboro de manera 
 
-**Palabras clave:** de 2 a 5 palabras clave. 
+**Palabras clave:** 
+- Potencia
+- Frecuencia
+- SDR
+- SNR
 
 ### Introducción
 - Las señales de mayor potencia mejoran la relación señal/ruido y, por tanto, la calidad de la comunicación ; pero los niveles excesivos pueden saturar el receptor o causar interferencias.
