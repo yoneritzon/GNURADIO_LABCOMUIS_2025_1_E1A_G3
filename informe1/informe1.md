@@ -40,9 +40,9 @@ En este informe se expone de forma general el procedimiento experimental llevado
 - SNR
 
 ### Introducción
-- Las señales de mayor potencia mejoran la relación señal/ruido.
-- A mayor valor de SNR mejor sera la salida ya que habra mas informacion util que informacion no deseada;por lo tanto un piso de ruido elevado dificultaria la deteccion de la señal y afecta la demodulacion correcta.
-- Para mejorar la visualizacion de la señal ya que estamos en un entorno con ruido, podemos variar el span,frecuencia central y RBW para la correcta visualizacion de la señal en el visualizador de espectros R&S FPC1000.
+Este informe aborda de manera integral diversos aspectos clave en la evaluación de sistemas de comunicación. Se analiza cómo la potencia de la señal influye en la calidad de la transmisión, y se examina el impacto del piso de ruido en la detección de señales débiles. Además, se consideran las limitaciones de los equipos empleados, en términos de ancho de banda y precisión de las mediciones, y se discuten estrategias para mejorar la confiabilidad de las mediciones en entornos con altos niveles de ruido.
+
+Asimismo, se exploran las aplicaciones prácticas de medir la potencia y el ancho de banda en sistemas de comunicaciones reales, junto con metodologías para determinar la respuesta en frecuencia de un canal alámbrico. Cada uno de estos temas se desarrolla en secciones específicas del informe, permitiendo un análisis detallado sin profundizar en esta introducción.
 
 ### Procedimiento
 #### Actividad 1
