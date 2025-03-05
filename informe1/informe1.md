@@ -43,11 +43,11 @@ Se corroboro de manera
 #### Actividad 2:
 Las señales de tipo flotante y complejas se pueden diferenciar matematicamente de la siguiente manera:
 <p align="center">
-Vfloat = V+ - V-  
+Vfloat(t) = Vmcos(2πft+ϕ)  
 </p>
 donde V- no necesariamente va conectado a tierra, esto nos puede ocacionar que quede flotando con respecto a los demas nodos del sistema, se modela con una ecuación diferencial simple de potenciales sin referencia absoluta, es decir, solo depende de la diferencia de voltaje entre sus terminales.
 <p align="center">
-Vcompl = Vm(cosθ+jsinθ)
+Vcomplex(t) = Vm(cosθ+jsinθ)
 </p>
 se modela en el dominio de los números complejos, lo que implica relaciones fasoriales, cambios de fase y transformadas de Fourier.
 
@@ -80,20 +80,19 @@ Ahora bien, si cambiamos los parametros de la fuente podemos observar diferentes
  
 Imagen #: Modificacion de parametros de la fuente.
 </p>
-Inicialmente la onda senoidal pura, al tener una componente real y una imaginaria, en el plano de la frecuencia se cancela unas componentes y por ende se observa un solo impulso. En la figura anterior se fue variando algunos parametros, cuando se cambio la fase de la onda, no hubo ningún cambio en la respuesta temporal ni en el espectro, es decir, no vario su potencia. Cuando se modifico el OFFSET hubo un cambio en la respuesta temporal, desplazandose verticalmente la componente real de la señal senoidal, pero el cambio mas importante se da en su espectro, donde aparecen dos impulsos, esto se debe a que al desplazarse la componente real de la señal, ya no se van a cancelar con las componentes imaginarias de la onda. Al modificar la frecuencia, se produjo cambios tanto en el tiempo como en su espectro, Los picos se desplazan a la nueva frecuencia ±f0′, la amplitud de los picos no cambia, porque la energía sigue concentrada en una sola frecuencia. Y para finalizar se cambio la amplitud provocando un aumento en la potencia de la señal tanto en el tiempo como en la frecuencia.
+Inicialmente la onda senoidal pura, al tener una componente real y una imaginaría, en el plano de la frecuencia se cancela unas componentes y por ende se observa un solo impulso. En la figura anterior se fue variando algunos parametros, cuando se cambio la fase de la onda, no hubo ningún cambio en la respuesta temporal ni en el espectro, es decir, no vario su potencia. Cuando se modifico el OFFSET hubo un cambio en la respuesta temporal, desplazandose verticalmente la componente real de la señal senoidal, pero el cambio mas importante se da en su espectro, donde aparecen dos impulsos, esto se debe a que al desplazarse la componente real de la señal, ya no se van a cancelar con las componentes imaginarias de la onda. Al modificar la frecuencia, se produjo cambios tanto en el tiempo como en su espectro, Los picos se desplazan a la nueva frecuencia ±f0′, la amplitud de los picos no cambia, porque la energía sigue concentrada en una sola frecuencia. Y para finalizar se cambio la amplitud provocando un aumento en la potencia de la señal tanto en el tiempo como en la frecuencia.
 
 Las señales cuadradas y senoidales denotan su mayor diferencia en su espectro, esto debido a que por una parte la señal seno distribuye casi toda su energia en 2 picos, la señal cuadrada genera muchos armonicos que van disminuyendo su potencia conforme se alejan de la fundamental.
 
 </p>
 
 #### Actividad 3:
+
 Inicialmente se configuró el software GNA RADIO para que el USRP 2920 pudiera transmitir las señales deseadas, para eso se modificaron ciertos bloques del flujograma:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bdd76b5b-ad86-4580-ba3d-909d178d228c" width="520"/>
   <img src="https://github.com/user-attachments/assets/cc7aa257-9ebe-46ef-bfda-121938ac09ee" width="350"/>
-![1_float])
-
 </p>   
 Imagen #: Modificacion de parametros de la USRP 2090
 </p>
@@ -102,6 +101,31 @@ En la figura anterior notese que el parametro de la ganancia del modulador es de
   <img src="https://github.com/user-attachments/assets/5121fcc8-c1b9-4c8d-b909-ea773700eb9f" width="550"/>
   <img src="https://github.com/user-attachments/assets/15ce160d-379b-41e9-bf1a-7dd068ec139b" width="400"/>
 </p>   
+Imagen #: Comparación de la potencia simulada y la recibida por el analizador de espectros.
+</p>
+Si comparamos la potencia de la simulación respecto a la mostrada en el analizador de espectros, se nota una diferencia de casi 14dB. Para calcular la maxima potencia que se podría entregar se procedio a aumentar los parametros necesarios:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cf6f6874-bfe6-48b8-9b00-69b2dadc4ee4" width="500"/>
+  <img src="https://github.com/user-attachments/assets/afa16fc8-2495-4233-8b67-4c552406521e" width="500"/>
+</p>   
+Imagen #: Potencia maxima para una señal coseno flotante.
+</p>
+
+Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/78632ef2-d70f-4bf4-99fa-b04376058642" width="550"/>
+  <img src="https://github.com/user-attachments/assets/a0ee2903-5251-4835-a829-d9a6b8247356" width="400"/>
+</p>   
+Imagen #: Potencia maxima para una señal coseno compleja.
+</p>
+Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador. Para calcular el ancho de banda
+con el analizador de espectros es necesario 
+
+
+
+
+
 
 ### Conclusiones
 Se sintetizan los principales aportes y puntos relevantes de la práctica, evitando repetir lo ya consignado en las otras secciones del informe. 
