@@ -40,7 +40,7 @@ En este informe se expone de forma general el procedimiento experimental llevado
 - SNR
 
 ### Introducción
-- Las señales de mayor potencia mejoran la relación señal/ruido y, por tanto, la calidad de la comunicación ; pero los niveles excesivos pueden saturar el receptor o causar interferencias.
+- Las señales de mayor potencia mejoran la relación señal/ruido.
 - A mayor valor de SNR mejor sera la salida ya que habra mas informacion util que informacion no deseada;por lo tanto un piso de ruido elevado dificultaria la deteccion de la señal y afecta la demodulacion correcta.
 - Para mejorar la visualizacion de la señal ya que estamos en un entorno con ruido, podemos variar el span,frecuencia central y RBW para la correcta visualizacion de la señal en el visualizador de espectros R&S FPC1000.
 
