@@ -31,7 +31,7 @@ Asimismo, los autores asumen plena responsabilidad por la información contenida
 ## Contenido
 
 ### Resumen
-Se corroboro de manera 
+En este informe se expone de forma general el procedimiento experimental llevado a cabo, detallando los instrumentos empleados (USRP 2920, osciloscopio RTB2004 y analizador de espectros FPC1000), y detallando el método para cuantificar parámetros como potencia, frecuencia y ruido. Se tratará la configuración de los equipos, la comparación de diversas representaciones de señales y el contraste entre los resultados de simulación y las mediciones reales, ilustrando en síntesis el efecto de los ajustes en la calidad de la comunicación.
 
 **Palabras clave:** 
 - Potencia
