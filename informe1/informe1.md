@@ -36,23 +36,58 @@ Se corroboro de manera
 **Palabras clave:** de 2 a 5 palabras clave. 
 
 ### Introducción
-Cada práctica contará con preguntas orientadoras para la elaboración de la introducción. Por ejemplo: 
-- ¿Qué tan importante es la teoría de muestreo en el procesamiento de señales?
-- ¿Cuáles son los principales potenciales de GNURADIO en el laboratorio de comunicaciones?
-- ¿Qué pasa cuando se alcanza el límite de Nyquist?
-- ¿Qué tan alta debe ser la relación entre la frecuencia de muestreo y la frecuencia de la señal para visualizar la señal correctamente?
-- ¿Cuándo es importante interpolar una señal?
-- ¿Cuándo es importante diezmar una señal?
-- ¿Qué pasa cuando se asigna una frecuencia de muestreo inadecuada?
+
 
 ### Procedimiento
 
-- ¿Cómo se alcanza el límite de Nyquist y que pasa cuando se disminuye de este?
-- ¿Por qué al interpolar una señal en GNURADIO su frecuencia disminuye?
-- ¿Por qué al diezmar una señal en GNURADIO su frecuencia aumenta?
-- ¿Cómo se puede determinar la frecuencia máxima de una señal desde lo experimental?
-- ¿Qué le sucede a una señal de audio cuando no se respeta el teorema de Nyquist?
-- Describa las funciones logradas con el Ecualizador desarrollado con GNURadio.
+#### Actividad 2:
+Las señales de tipo flotante y complejas se pueden diferenciar matematicamente de la siguiente manera:
+<p align="center">
+Vfloat = V+ - V-  
+</p>
+donde V- no necesariamente va conectado a tierra, esto nos puede ocacionar que quede flotando con respecto a los demas nodos del sistema, se modela con una ecuación diferencial simple de potenciales sin referencia absoluta, es decir, solo depende de la diferencia de voltaje entre sus terminales.
+<p align="center">
+Vcompl = Vm(cosθ+jsinθ)
+</p>
+se modela en el dominio de los números complejos, lo que implica relaciones fasoriales, cambios de fase y transformadas de Fourier.
+
+Ademas se pueden diferenciar tanto en el tiempo como en el espectro de la señal, para este caso usamos una funcion senoidal.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7c53be53-8075-48d1-94bd-b57b0d63b01c" width="500"/>
+  <img src="https://github.com/user-attachments/assets/db6f20b5-56e1-4c66-bbdf-0440219724b3" width="500"/>
+</p>
+Imagen #: Onda senoidal compleja (izquierda) y onda senoidal flotante (derecha)
+</p>
+
+Al analizar las distintas formas de ondas, se pudo observar un cambio en la distribucion de la potencia en el dominio de la frecuencia, tal y como podemos observar en las siguientes graficas:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c76cab1d-cb5d-4e62-b174-0649d066c5a0" width="500"/>
+  <img src="https://github.com/user-attachments/assets/28614b75-55c9-41c4-b65d-cd5cfe143c95" width="500"/>
+</p>
+Imagen #: Onda cuadrada (izquierda), onda triangular (derecha)
+    ![1_complex2](https://github.com/user-attachments/assets/1a12f8ea-6970-4b3b-8c67-c13a5a5ddc4f)
+
+Si observamos la onda cuadrada, esta contiene armónicos impares (múltiplos de 𝑓0), ademas la energía se distribuye en varias frecuencias, disminuyendo con $1/𝑛$ como se puede ver en la grafica.
+En cuanto a la onda triangular esta también tiene solo armónicos impares, pero con menor amplitud que la onda cuadrada.
+La potencia decrece más rápido, aproximadamente con $1/𝑛^2$, lo que significa menor contenido de alta frecuencia.
+
+Ahora bien, si cambiamos los parametros de la fuente podemos observar diferentes cambios tales como:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bcada02f-efe9-46d2-934d-8f249962aa7c" width="500"/>
+  <img src="https://github.com/user-attachments/assets/0ae69fee-56c4-4c83-a9eb-3040ca6ef45f" width="500"/>
+  <img src="https://github.com/user-attachments/assets/1f7a986b-c8fc-4f06-bd32-b2ce42156cef" width="500"/>
+  <img src="https://github.com/user-attachments/assets/1a12f8ea-6970-4b3b-8c67-c13a5a5ddc4f" width="500"/>
+ </p>   
+Imagen #: Modificacion de parametros de la fuente.
+</p>
+En la figura anterior 
+
+</p>
+
+
+
+
+
 
 ### Conclusiones
 Se sintetizan los principales aportes y puntos relevantes de la práctica, evitando repetir lo ya consignado en las otras secciones del informe. 
