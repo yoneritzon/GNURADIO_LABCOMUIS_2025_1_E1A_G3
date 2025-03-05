@@ -161,8 +161,20 @@ Se oberva que la señal final es parecida a la simulada, pero su potencia es may
 </p>   
 Imagen #: Potencia maxima para una señal coseno compleja.
 </p>
+
 Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador. Para calcular el ancho de banda
-con el analizador de espectros es necesario 
+con el analizador fue necesario identificar que tipo de filtro era, en este caso un pasa banda, luego se procedio a calcularlo:
+<p align="center">
+  BWM= f2-f1
+</p> 
+
+
+
+
+
+
+
+
 ### Conclusiones
 - La práctica evidenció la relevancia de ajustar adecuadamente los parámetros y montar correctamente los equipos para conseguir una señal de alta calidad y un análisis exacto en ambientes ruidosos. 
 - Una potencia de señal adecuada mejora la SNR, lo que se ve como una mayor calidad, no obstante niveles exesivos podrian saturar o inducir interderencia.
