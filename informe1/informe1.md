@@ -45,28 +45,28 @@ Asimismo, se exploran las aplicaciones prácticas de medir la potencia y el anch
 
 ### Procedimiento
 #### Actividad 1
-#### USRP 2920
+###### USRP 2920
 1. Rango de frecuencia (50 MHz a 2.2 GHz).
 2. Rango de ganancia (0 dB a 31 dB en TX y 0 dB a 31.5 dB en RX).
 3. Ancho de banda máximo en tiempo real (hasta 40 MHz).
 4. Velocidad máxima de muestreo I/Q (25 MS/s en 16 bits y 50 MS/s en 8 bits).
 5. Conectividad (Interfaz Gigabit Ethernet y requerimiento de alimentación de 6 V, 3 A).
 
-#### Osciloscopio R&S RTB2004
+###### Osciloscopio R&S RTB2004
 1. Ancho de banda.
 2. Resolución vertical (10‑bit ADC).
 3. Tasa de muestreo.
 4. Profundidad de memoria.
 5. Pantalla táctil de alta resolución.
 
-#### Analizador de espectro R&S®FPC1000
+###### Analizador de espectro R&S®FPC1000
 1. Rango de frecuencia (5 kHz a 1 GHz, ampliable hasta 2 o 3 GHz con opciones). 
 2. Resolución de frecuencia (1 Hz). 
 3. Resolución de banda (RBW) – Rango 1 Hz a 3 MHz en secuencia de 1/3, con precisión nominal (<5% para RBW ≤300 kHz y <10% para 300 kHz a 1 MHz). 
 4. Nivel de entrada y piso de ruido – Rango de visualización desde el piso de ruido hasta +30 dBm.
 5. Tiempo de barrido – Desde 10 ms hasta 1000 s, con incertidumbre nominal de 1% a 3%.
 
-#### Medicion de piso de ruido normalizado
+###### Medicion de piso de ruido normalizado
 La medicion de ruido normalizado dio como resultado -98.682 [dB] esto teniendo en cuenta los datos arrojados por el analizador de espectros.
 #### Actividad 2:
 Las señales de tipo flotante y complejas se pueden diferenciar matematicamente de la siguiente manera:
@@ -75,7 +75,7 @@ Vfloat(t) = Vm.sen(2πft+ϕ)
 </p>
 donde:
 
-A es la amplitud.
+Vm es la amplitud.
 
 𝑓 es la frecuencia.
 
