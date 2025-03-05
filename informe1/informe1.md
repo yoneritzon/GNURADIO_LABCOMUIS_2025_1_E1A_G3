@@ -140,7 +140,7 @@ En la figura anterior notese que el parametro de la ganancia del modulador es de
 Ejemplo de referencia:
 
 - [Proakis, 2014] J. Proakis, M. Salehi. Fundamentals of communication systems. 2 ed. England: Pearson Education Limited, 2014. p. 164-165, 346. Chapter 5 In: [Biblioteca UIS](https://uis.primo.exlibrisgroup.com/permalink/57UIDS_INST/63p0of/cdi_askewsholts_vlebooks_9781292015699)
-
+- ChatGPT, modelo GPT-4 de OpenAI. (2025). Información generada mediante interacción en ChatGPT. Disponible en https://chat.openai.com
 ---
 # Ejemplos usando Markdown
 
