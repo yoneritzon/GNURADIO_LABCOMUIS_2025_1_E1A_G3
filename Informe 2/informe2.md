@@ -31,28 +31,32 @@ Asimismo, los autores asumen plena responsabilidad por la información contenida
 ## Contenido
 
 ### Resumen
-En este informe se expone de forma general el procedimiento experimental llevado a cabo, detallando los instrumentos empleados (USRP 2920, osciloscopio RTB2004 y analizador de espectros FPC1000), y detallando el método para cuantificar parámetros como potencia, frecuencia y ruido. Se tratará la configuración de los equipos, la comparación de diversas representaciones de señales y el contraste entre los resultados de simulación y las mediciones reales, ilustrando en síntesis el efecto de los ajustes en la calidad de la comunicación.
+Este laboratorio evaluó el impacto del canal en la calidad de la señal mediante simulaciones en GNU Radio y mediciones reales con USRP, osciloscopio y analizador de espectros. Se estudiaron efectos del ruido, filtrado y atenuación para optimizar la relación señal-ruido en la transmisión de datos.
 
 **Palabras clave:** 
-- Potencia
-- Frecuencia
-- SNR
+- Canal de transmisión
+- Ruido
+- Filtrado
+- Atenuación
 
 ### Introducción
-Este informe aborda de manera integral diversos aspectos clave en la evaluación de sistemas de comunicación. Se analiza cómo la potencia de la señal influye en la calidad de la transmisión, y se examina el impacto del piso de ruido en la detección de señales débiles. Además, se consideran las limitaciones de los equipos empleados, en términos de ancho de banda y precisión de las mediciones, y se discuten estrategias para mejorar la confiabilidad de las mediciones en entornos con altos niveles de ruido.
+Este informe analiza el comportamiento de las señales al atravesar distintos canales de transmisión. A través de simulaciones en GNU Radio y mediciones experimentales con equipos como el USRP, osciloscopio y analizador de espectros, se investigaron los efectos del ruido, filtrado y atenuación para optimizar la recuperación de la información.
+
 
 Asimismo, se exploran las aplicaciones prácticas de medir la potencia y el ancho de banda en sistemas de comunicaciones reales, junto con metodologías para determinar la respuesta en frecuencia de un canal alámbrico. Cada uno de estos temas se desarrolla en secciones específicas del informe, permitiendo un análisis detallado sin profundizar en esta introducción.
 
 ### Procedimiento
 #### Actividad 1: Simulación de canal en GNU Radio
-Para la siguiente simulación usamos una onda triangular con la idea de verificar el comportamiento de su espectro al aplicarle diferentes frecuencias de filtrado.
+Para la siguiente simulación usamos una onda triangular para verificar el comportamiento de su espectro al aplicarle diferentes frecuencias de filtrado.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/29150dc4-71b0-478f-b0db-1cdf37272160" width="500"/>
   <img src="https://github.com/user-attachments/assets/5af0e2c5-b333-486b-b528-e12607a16c98" width="500"/>
 </p>
 Imagen 1: Filtrado de altas frecuencias (izquierda) vs bajas frecuencias (derecha)
 </p>
-Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demás armonicos de la señal se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuye a lo largo de su espectro, y la información se conserva casi en su totalidad.
+Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demás armonicos de la señal se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuye a lo largo de su espectro, y la información se conserva casi en su totalidad. Este efecto es visible para cualquier tipo de señal, cuadratica, senoial, entre otras.
+
+
 Si la señal recibe una desviación en la frecuencia antes de entrar al filtro, esto ocasiona que el filtro elimine parte de la señal que se sale del rango de filtrado. Además Cuando consideramos el ruido que afecta a la señal, podemos calcular la degradacion que sufre esta señal:
 </p> 
 <p align="center">
@@ -62,70 +66,59 @@ Si la señal recibe una desviación en la frecuencia antes de entrar al filtro, 
 
 
 #### Actividad 2: Fenómenos de canal en el osciloscopio
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b3c6d46d-d45b-4c46-92c3-5fcb63527779" width="510"/>
+  <img src="https://github.com/user-attachments/assets/287f10d4-e6cb-48a0-967c-6720d10590d7" width="490"/>
+</p>   
+Imagen 2: Señal senoidal sin ruido
+</p>
+Al no existir ruido, la envolvente de la señal no tiene ninguna perturbación.
+</p> 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/355d923b-1aee-4143-81db-d39eb9d43b43" width="510"/>
   <img src="https://github.com/user-attachments/assets/c80ac8b3-7872-491f-b831-56ff55e2b99e" width="490"/>
 </p>   
-Imagen 2: Señal senoidal con ruido
+Imagen 3: Señal senoidal con ruido
 </p>
-En la figura anterior notese que el parametro de la ganancia del modulador es de 30 dB, por ende la señal que se simula no es la misma que llega al analizador de espectros por que este le va a inyectar una ganancia a la señal, como se obserba en la siguiente imagen:
+En la figura anterior notese que al aparecer ruido en la señal su envolvelte presenta perturbaciones.
+</p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5121fcc8-c1b9-4c8d-b909-ea773700eb9f" width="550"/>
-  <img src="https://github.com/user-attachments/assets/15ce160d-379b-41e9-bf1a-7dd068ec139b" width="400"/>
+  <img src="https://github.com/user-attachments/assets/3325318a-e70d-468f-9f0d-389143b79fe1" width="330"/>
+  <img src="https://github.com/user-attachments/assets/64566a0c-eda2-462b-bcad-624266cde068" width="330"/>
+  <img src="https://github.com/user-attachments/assets/aaaf4140-04d9-4231-ab15-0053f1c6de7d" width="330"/>
 </p>   
-Imagen 5: Modificacion de parametros de la USRP 2090
+Imagen 4: Comportamiento de la envolvente de una señal senoidal (50Mhz, 400Mhz y 500Mhz)
+
+Al variar la frecuencia de la portadora, la envolvente tiende a aumentar o disminuir la potencia de la señal.
+
+#### Actividad 3: Fenómenos de canal en el analizador de espectro
+
+
+</p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5121fcc8-c1b9-4c8d-b909-ea773700eb9f" width="550"/>
-  <img src="https://github.com/user-attachments/assets/15ce160d-379b-41e9-bf1a-7dd068ec139b" width="400"/>
+  <img src="https://github.com/user-attachments/assets/4dbdb796-3c50-4bac-91a5-39d3db55e2c2" width="500"/>
+  <img src="https://github.com/user-attachments/assets/903d9109-1174-43f8-aa1c-d6e4cb762209" width="500"/>
+  <img src="https://github.com/user-attachments/assets/fb8644df-4c13-4dc2-a66a-51120cdd3eef" width="1000"/>
+
+</p>     
+Imagen 5: Espectro de una señal cuadrada al aplicarle ruido
+</p>  
+Se evidencia el ruido de la señal que recibe el espectometro, y un leve desplazamiento del piso de este.
+
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c9dcb4a4-54fb-456f-9f14-d008e29318aa" width="500"/>
+  <img src="https://github.com/user-attachments/assets/22163fff-878c-4836-8305-52a93bbc7720" width="500"/>
 </p>   
-Imagen 6: Comparación de la potencia simulada y la recibida por el analizador de espectros.
-</p>
-Si comparamos la potencia de la simulación respecto a la mostrada en el analizador de espectros, se nota una diferencia de casi 14dB. Para calcular la maxima potencia que se podría entregar se procedio a aumentar los parametros necesarios:
+Imagen 6: Afectación producida por un cable coaxial de 1 y 10 metros respectivamente
+</p>  
+Analizando su espectro se observa que este se desplaza verticalmente, es decir, disminuye su potencia, esto nos da a entender que entre mayor sea la longitud del cable,
+mayor será la perdida de potencia de la señal. Algo similar ocurrió cuando se usaron las antenas, aunque su efecto no se evidenció tanto debido a que no se podía alejar tanto los instrumentos.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/cf6f6874-bfe6-48b8-9b00-69b2dadc4ee4" width="500"/>
-  <img src="https://github.com/user-attachments/assets/afa16fc8-2495-4233-8b67-4c552406521e" width="500"/>
-</p>   
-Imagen 7: Potencia maxima para una señal coseno flotante.
-</p>
+#### Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
 
-Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/78632ef2-d70f-4bf4-99fa-b04376058642" width="550"/>
-  <img src="https://github.com/user-attachments/assets/a0ee2903-5251-4835-a829-d9a6b8247356" width="400"/>
-</p>   
-Imagen 8: Potencia maxima para una señal coseno compleja.
-</p>
 
-Se oberva que la señal final es parecida a la simulada, pero su potencia es mayor debido a la ganancia del modulador. Para calcular la ganancia entregada por el radio, calculamos la ganancia de la señal y luego hacemos una diferencia en potencias con la que nos muestra el analizador de espectros:
-
-Potencia teorica de la señal antes de modularse:
-<p align="center">
-  P= 10Log(A^2/4) = -12.04 [dB]
-</p> 
-La potencia experimental obtenida de la grafica (Imagen 8) es aproximadamente de -16.00 [dBm].
-</p>
-<p align="center">
-  P = -16 - (-12,04)  = 13.96 [dB] Mayor a la simulada </p>
-  
-<p align="center">
-  P = 10^(13,96/10)   = 24,88 [W] Mayor a la simulada </p>
-  
-<p align="center">
-  V = (5,49)^(0.5)    = 4,98 [v] Mayor a la simulada
-</p> 
-Se aclara que esta potencia se calculo tomando en cuenta 1 sola componente del espectro.
-</p> 
-Para calcular el ancho de banda
-con el analizador fue necesario identificar que tipo de filtro era, en este caso un banda base, luego se procedio a calcularlo:
-<p align="center">
-  BWM= f2-f1 = 3,7 [kHz]
-</p> 
-Para normalizar el piso de ruido fue necesario sacar unos valores aproximados en los que oscilaba el ruido.
-<p align="center">
-  NF= PNref - 10log(RBW/1) = (-58-68)/2 - 10log(3,7k/1) = -98.68 [dBm]
-</p> 
 
 ### Conclusiones
 - La práctica evidenció la relevancia de ajustar adecuadamente los parámetros y montar correctamente los equipos para conseguir una señal de alta calidad y un análisis exacto en ambientes ruidosos. 
