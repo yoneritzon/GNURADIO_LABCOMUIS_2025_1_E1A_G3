@@ -115,9 +115,15 @@ Imagen 6: Afectación producida por un cable coaxial de 1 y 10 metros respectiva
 </p>  
 Analizando su espectro se observa que este se desplaza verticalmente, es decir, disminuye su potencia, esto nos da a entender que entre mayor sea la longitud del cable,
 mayor será la perdida de potencia de la señal. Algo similar ocurrió cuando se usaron las antenas, aunque su efecto no se evidenció tanto debido a que no se podía alejar tanto los instrumentos.
+</p>  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/889503c5-36dd-486c-97d5-9d8beee9751b" width="500"/>
+  <img src="https://github.com/user-attachments/assets/5bcb81b2-52bc-4675-bf44-b181eb4237b7" width="500"/>
+</p>  
+Imagen 7: Espectro de una cancion reflejada.
+Al emitir una cancion por el radio y revibirla por el mismo, se forma un efecto de rebote, que ocaciona distoriones en la señal que se recibe, por ende la cancion suena distorsionada, fue necesario aplicar
+ciertos cambios para que se pudiera escuchar un poco la cancion, no obstante como los componentes internos del radio estan cerca, aun asi si se desconectaba el cable, seguia llegando una señal, mas distorionada que la que llegaba por el coaxial.
 
-![Cancion reflejada funcionando mas o menos bien](https://github.com/user-attachments/assets/889503c5-36dd-486c-97d5-9d8beee9751b)
-![Espectro de la señal de audio reflejada usamos un rational resampler](https://github.com/user-attachments/assets/5bcb81b2-52bc-4675-bf44-b181eb4237b7)
 
 
 #### Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
