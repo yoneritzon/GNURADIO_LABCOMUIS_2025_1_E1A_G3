@@ -54,8 +54,8 @@ Para la siguiente simulación usamos una onda triangular para verificar el compo
 </p>
 Imagen 1: Filtrado de altas frecuencias (izquierda) vs bajas frecuencias (derecha)
 </p>
-Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demás armonicos de la señal se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuye a lo largo de su espectro, y la información se conserva casi en su totalidad. Este efecto es visible para cualquier tipo de señal, cuadratica, senoial, entre otras.
-
+Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demás armonicos de la señal se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuye a lo largo de su espectro, y la información se conserva casi en su totalidad. Este efecto es visible para cualquier tipo de señal, cuadrática, senoidal o otras.
+</p>
 
 Si la señal recibe una desviación en la frecuencia antes de entrar al filtro, esto ocasiona que el filtro elimine parte de la señal que se sale del rango de filtrado. Además Cuando consideramos el ruido que afecta a la señal, podemos calcular la degradacion que sufre esta señal:
 </p> 
@@ -90,7 +90,7 @@ En la figura anterior notese que al aparecer ruido en la señal su envolvelte pr
 </p>   
 Imagen 4: Comportamiento de la envolvente de una señal senoidal (50Mhz, 400Mhz y 500Mhz)
 
-Al variar la frecuencia de la portadora, la envolvente tiende a aumentar o disminuir la potencia de la señal.
+Al variar la frecuencia de la portadora, la envolvente se obserba atenuada o distorsionada esto sucede por que el osciloscopio o las sondas no son lo suficientemente rápidas.
 
 #### Actividad 3: Fenómenos de canal en el analizador de espectro
 
@@ -116,14 +116,55 @@ Imagen 6: Afectación producida por un cable coaxial de 1 y 10 metros respectiva
 Analizando su espectro se observa que este se desplaza verticalmente, es decir, disminuye su potencia, esto nos da a entender que entre mayor sea la longitud del cable,
 mayor será la perdida de potencia de la señal. Algo similar ocurrió cuando se usaron las antenas, aunque su efecto no se evidenció tanto debido a que no se podía alejar tanto los instrumentos.
 
-#### Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
+![Cancion reflejada funcionando mas o menos bien](https://github.com/user-attachments/assets/889503c5-36dd-486c-97d5-9d8beee9751b)
+![Espectro de la señal de audio reflejada usamos un rational resampler](https://github.com/user-attachments/assets/5bcb81b2-52bc-4675-bf44-b181eb4237b7)
 
+
+#### Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
+Al analizar todos los datos obtenidos en las demas actividades se puede decir que:
+a) Atenuación en el Cable Coaxial
+- La señal llega con menor amplitud al espectrómetro.
+- Si el cable es muy largo o de baja calidad, la pérdida de potencia es notable.
+Causa:
+- Resistencia del conductor y pérdidas dieléctricas en el coaxial.
+Mitigación:
+✔ Usar cables coaxiales de baja pérdida (que este hecho de un material más conductivo).
+✔ Acortar la longitud del cable siempre que sea posible.
+✔ Incluir un amplificador de señal si la atenuación es crítica.
+
+b) Ruido por Interferencia
+- Pequeñas fluctuaciones aleatorias en la señal recibida.
+- Si hay fuentes de interferencia cercanas (equipos eléctricos presentes en el laboratorio), aparecen picos espurios en el espectrómetro.
+Causa:
+- Ruido térmico (Johnson-Nyquist) en el cable y componentes.
+- Acoplamiento inductivo/capacitivo de interferencias externas.
+Mitigación:
+✔ Usar cables blindados y evitar dobleces bruscos.
+✔ Alejar el sistema de fuentes de interferencia (motores, fuentes de alimentación).
+✔ Terminar correctamente el cable con conectores de buena calidad.
+
+c) Reflexiones (Impedancia Desadaptada)
+- Ondulaciones en la respuesta en frecuencia (ripple).
+- Si el cable y las antenas no tienen la misma impedancia (ej.: 50 Ω vs 75 Ω), parte de la señal se refleja.
+Causa:
+- Mala terminación del coaxial o conexiones flojas.
+Mitigación:
+✔ Asegurar que todos los componentes tengan la misma impedancia (como ejemplo; 50 Ω en radio, cable y antena).
+✔ Usar un acoplador de impedancia si hay incompatibilidad.
+✔ Verificar que no haya conexiones flojas o oxidación en los conectores.
+
+d) Distorsión por No Linealidades
+- Armónicos no deseados en el espectrómetro (ej.: si se transmite a 1 MHz, aparecen componentes en 2 MHz, 3 MHz, etc.).
+Causa:
+- Componentes activos (amplificadores) operando cerca de saturación.
+Mitigación:
+✔ Evitar sobreexcitar amplificadores (trabajar en la región lineal).
+✔ Usar filtros paso bajo para eliminar armónicos no deseados antes del espectrómetro.
 
 
 ### Conclusiones
-- La práctica evidenció la relevancia de ajustar adecuadamente los parámetros y montar correctamente los equipos para conseguir una señal de alta calidad y un análisis exacto en ambientes ruidosos. 
-- Una potencia de señal adecuada mejora la SNR, lo que se ve como una mayor calidad, no obstante niveles exesivos podrian saturar o inducir interderencia.
-- Aunque las fuentes complejas incorporan datos de magnitud y fase, las fuentes flotantes son modeladas como valores reales que se basan en un voltaje. Esto es crucial para el estudio fasorial y para la aplicación de las transformadas de Fourier.
+En conclusión, el informe demostró que tanto en simulaciones como en experimentos reales se evidencian los efectos del ruido, la atenuación y el filtrado en la calidad de la señal. Las actividades permitieron validar que una adecuada selección de parámetros y técnicas de procesamiento, como el filtrado de armónicos, mejora significativamente la relación señal-ruido y la recuperación de la información, tanto en entornos cableados como inalámbricos. Estos resultados resaltan la importancia de comprender y mitigar los fenómenos del canal para optimizar el desempeño de sistemas de comunicación.
+
 ### Referencias
 Ejemplo de referencia:
 
