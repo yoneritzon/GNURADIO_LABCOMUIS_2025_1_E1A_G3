@@ -45,15 +45,15 @@ Asimismo, se exploran las aplicaciones prácticas de medir la potencia y el anch
 
 ### Procedimiento
 #### Actividad 1: Simulación de canal en GNU Radio
-Para la siguiente simulacion usamos una onda triangular con la idea de verificar el comportamiento de su espectro al aplicarle diferentes frecuencias de filtrado.
+Para la siguiente simulación usamos una onda triangular con la idea de verificar el comportamiento de su espectro al aplicarle diferentes frecuencias de filtrado.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/29150dc4-71b0-478f-b0db-1cdf37272160" width="500"/>
   <img src="https://github.com/user-attachments/assets/5af0e2c5-b333-486b-b528-e12607a16c98" width="500"/>
 </p>
 Imagen 1: Filtrado de altas frecuencias (izquierda) vs bajas frecuencias (derecha)
 </p>
-Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demas armonicos de la señal, se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuñe a lo largo de su espectro, y la informacion se conserva casi en su totalidad.
-Si la señal recibe una desviación en la frecuencia antes de entrar al filtro, esto ocasiona que el filtro elimine parte de la señal que sale del de su rango de filtrado. Cuando consideramos el ruido que afecta a la señal, podemos calcular la degradacion que esta señal sufre:
+Se puede comprobar efectivamente que al filtrar en bajas frecuencias solo se deja pasar al armonico fundamental y al eliminar los demás armonicos de la señal se pierde parte de la potencia de esta y en consecuencia información o calidad. En cambio en altas frecuencias se dejan pasar más armonicos, y por ende la potencia de esa señal se distribuye a lo largo de su espectro, y la información se conserva casi en su totalidad.
+Si la señal recibe una desviación en la frecuencia antes de entrar al filtro, esto ocasiona que el filtro elimine parte de la señal que se sale del rango de filtrado. Además Cuando consideramos el ruido que afecta a la señal, podemos calcular la degradacion que sufre esta señal:
 </p> 
 <p align="center">
   SNR= PNref - 10log(P_Señal/P_ruido) = P_señal[dB] - P_ruido [dB] = -18 - (-65) = 42[dB]
