@@ -128,43 +128,73 @@ ciertos cambios para que se pudiera escuchar un poco la cancion, no obstante com
 
 #### Actividad 4: Efectos de los fenómenos de canal en la conversión de frecuencia
 Al analizar todos los datos obtenidos en las demas actividades se puede decir que:
+</p>  
 a) Atenuación en el Cable Coaxial
+
 - La señal llega con menor amplitud al espectrómetro.
+
 - Si el cable es muy largo o de baja calidad, la pérdida de potencia es notable.
+</p>  
 Causa:
+
 - Resistencia del conductor y pérdidas dieléctricas en el coaxial.
+</p>  
 Mitigación:
+
 ✔ Usar cables coaxiales de baja pérdida (que este hecho de un material más conductivo).
+
 ✔ Acortar la longitud del cable siempre que sea posible.
+
 ✔ Incluir un amplificador de señal si la atenuación es crítica.
 
 b) Ruido por Interferencia
 - Pequeñas fluctuaciones aleatorias en la señal recibida.
 - Si hay fuentes de interferencia cercanas (equipos eléctricos presentes en el laboratorio), aparecen picos espurios en el espectrómetro.
+</p>  
 Causa:
-- Ruido térmico (Johnson-Nyquist) en el cable y componentes.
+
+- Ruido térmico en el cable y componentes.
+
 - Acoplamiento inductivo/capacitivo de interferencias externas.
+</p>  
 Mitigación:
+
 ✔ Usar cables blindados y evitar dobleces bruscos.
+
 ✔ Alejar el sistema de fuentes de interferencia (motores, fuentes de alimentación).
+
 ✔ Terminar correctamente el cable con conectores de buena calidad.
 
 c) Reflexiones (Impedancia Desadaptada)
+
 - Ondulaciones en la respuesta en frecuencia (ripple).
-- Si el cable y las antenas no tienen la misma impedancia (ej.: 50 Ω vs 75 Ω), parte de la señal se refleja.
+  
+- Si el cable y las antenas no tienen la misma impedancia parte de la señal se refleja.
+</p>  
 Causa:
+
 - Mala terminación del coaxial o conexiones flojas.
+</p>  
 Mitigación:
+
 ✔ Asegurar que todos los componentes tengan la misma impedancia (como ejemplo; 50 Ω en radio, cable y antena).
+
 ✔ Usar un acoplador de impedancia si hay incompatibilidad.
+
 ✔ Verificar que no haya conexiones flojas o oxidación en los conectores.
 
 d) Distorsión por No Linealidades
-- Armónicos no deseados en el espectrómetro (ej.: si se transmite a 1 MHz, aparecen componentes en 2 MHz, 3 MHz, etc.).
+</p>  
 Causa:
+
+- Armónicos no deseados en el espectrómetro (si se transmite a 1 MHz, aparecen componentes en 2 MHz, 3 MHz, etc.).
+
 - Componentes activos (amplificadores) operando cerca de saturación.
+</p>  
 Mitigación:
+
 ✔ Evitar sobreexcitar amplificadores (trabajar en la región lineal).
+
 ✔ Usar filtros paso bajo para eliminar armónicos no deseados antes del espectrómetro.
 
 
