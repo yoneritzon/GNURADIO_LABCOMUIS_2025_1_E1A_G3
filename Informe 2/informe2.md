@@ -121,6 +121,8 @@ mayor será la perdida de potencia de la señal. Algo similar ocurrió cuando se
   <img src="https://github.com/user-attachments/assets/5bcb81b2-52bc-4675-bf44-b181eb4237b7" width="500"/>
 </p>  
 Imagen 7: Espectro de una cancion reflejada.
+</p>  
+
 Al emitir una canción por el radio y recibirla por el mismo, se forma un efecto de rebote, que ocaciona distorsiones en la señal que se recibe, por ende la cancion suena mal, para mitigar este efecto  fue necesario aplicar ciertos cambios en el radio, no obstante como los componentes internos del radio estan cerca, aún así si se desconectaba el cable, seguía llegando una señal, incluso más distorionada que la que llegaba por el coaxial.
 
 
